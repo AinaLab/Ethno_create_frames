@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <script src="https://miro.com/app/static/sdk.1.1.js"></script>
+	  
+	  
+	  <script> 
+		  miro.onReady(async() => {
+        miro.initialize({
+          extensionPoints: {
+            bottomBar: {
+              title: 'Create frames', svgIcon:'<circle cx="12" cy="12" r="9" fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="2"/>',positionPriority: 1,
+              onClick: async () => {
+                y = 650
+                for (var theme = 1; theme <= 5; theme++){
+                  for (var row = 1; row <= 3; row ++){
+                    x = 6438
+                    for (var sub_theme = 1; sub_theme <= 10; sub_theme++){
+
+                      for (var col = 1; col <= 3; col++){
+                            await miro.board.widgets.create(
+                            {"type" : "frame", "x" : x, "y":y, "width":540, "height":570, title:"Titre du frame"}) 
+                        x = x + 585
+                      }
+                      x = x + 240
+                    }
+                    y = y + 690
+                  }
+                  y = y + 460
+                }
+		  })
+	  </script>
+	  
+	  
+
+  </head>
+
+</html>
