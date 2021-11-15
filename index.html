@@ -18,12 +18,14 @@ miro.onReady(async() => {
 						  for (var row = 1; row <= 3; row ++){
 						    x = 6438
 						    for (var sub_theme = 1; sub_theme <= 10; sub_theme++){
-
-						      for (var col = 1; col <= 3; col++){
+							if (row == 1){
+								await miro.board.widgets.create({"type" : "text", "x" : x+600, "y":y-500, "scale":5.7, text:"Sous-thème " + theme.toString() + "." + sub_theme.toString()})
+							}
+						        for (var col = 1; col <= 3; col++){
 							    await miro.board.widgets.create(
 							    {"type" : "frame", "x" : x, "y":y, "width":540, "height":570, title:"Titre du frame"}) 
 							x = x + 585
-						      }
+						        }
 						      x = x + 240
 						    }
 						    y = y + 690
