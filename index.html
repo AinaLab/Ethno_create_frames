@@ -19,7 +19,7 @@ miro.onReady(async() => {
 						    x = 6438
 						    for (var sub_theme = 1; sub_theme <= 10; sub_theme++){
 							if (row == 1){
-								await miro.board.widgets.create({"type" : "text", "x" : x+600, "y":y-500, "scale":5.7, "text":"Sous-thème " + theme.toString() + "." + sub_theme.toString(),"width" : 300, "style" : {"textAlign" : "c"}} )
+								await miro.board.widgets.create({"type" : "text", "x" : x+600, "y":y-500, "scale":5.7, "text":"<p> Sous-thème " + theme.toString() + "." + sub_theme.toString() + "</p>","width" : 300, "style" : {"textAlign" : "c"}} )
 							}
 						        for (var col = 1; col <= 3; col++){
 							    await miro.board.widgets.create(
